@@ -54,3 +54,35 @@ function closeWindow() {
 }
 document.getElementById("openWindowBtn").addEventListener("click", newWindow);
 document.getElementById("closeWindowBtn").addEventListener("click", closeWindow);
+
+const rows = 13;
+const cols = 10;
+
+const tableDiv = document.getElementById("tableDiv");
+const tableEl = document.createElement("table");
+
+for (let r = 0; r < rows; r++) {
+  const tr = document.createElement("tr");
+  for (let c = 0; c < cols; c++) {
+    const td = document.createElement("td");
+    if(r>3&&r<9&&c==0){
+      td.style.backgroundColor = "Red";
+    }
+    if(r>4&&r<8&&c==1){
+      td.style.backgroundColor = "Red";
+    }
+    if(r==6&&c==2){
+      td.style.backgroundColor = "Red";
+    }
+    tr.appendChild(td);
+  }
+  if(r<4){
+    tr.style.backgroundColor = "Black";
+  }
+  if(r>8){
+    tr.style.backgroundColor = "Green";
+  }
+  tableEl.appendChild(tr);
+}
+
+tableDiv.appendChild(tableEl);
