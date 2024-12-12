@@ -99,8 +99,8 @@ const firstChild = container.firstChild;
 
 
 changeTextButton.addEventListener("click", () => {
-    message.style.backgroundColor = "Red";
-    message.textContent = "Text has been changed!";
+    message.style.backgroundColor = "Yellow";
+    message.textContent = "Free Palestine!";
 });
 
 
